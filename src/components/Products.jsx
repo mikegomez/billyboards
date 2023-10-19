@@ -155,19 +155,19 @@ const Products = () => {
                 className="btn btn-outline-dark btn-sm m-2"
               //  onClick={() => filterProduct("women's clothing")}
               >
-                CryptoCoins
+                Cryptocurrency
               </button>
               <button
                 className="btn btn-outline-dark btn-sm m-2"
               //  onClick={() => filterProduct("jewelry")}
               >
-                Websites
+                Exchanges
               </button>
               <button
                 className="btn btn-outline-dark btn-sm m-2"
                // onClick={() => filterProduct("electronics")}
               >
-                Business
+                Websites
                 </button>
             </div>
           )}
@@ -186,8 +186,8 @@ const Products = () => {
                   height={300}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">{product.title}</h5>
-                  <p className="card-text">{product.description}</p>
+                  {/* <h5 className="card-title">{product.title}</h5> */}
+                  {/* <p className="card-text">{product.description}</p> */}
                 </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item lead">$ {product.price}</li>

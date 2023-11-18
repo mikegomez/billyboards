@@ -1,5 +1,10 @@
 import React from 'react'
 import { Footer, Navbar } from "../components";
+import image1 from '../components/assets/1.jpg';
+import image2 from '../components/assets/bitcoins.png';
+import image3 from '../components/assets/21.png';
+import image4 from '../components/assets/websites.png'
+
 const AboutPage = () => {
   return (
     <>
@@ -15,7 +20,7 @@ const AboutPage = () => {
         <div className="row">
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <img className="card-img-top img-fluid" src={image1} alt="" height={160} />
               <div className="card-body">
                 <h5 className="card-title text-center">NFTs</h5>
               </div>
@@ -23,7 +28,7 @@ const AboutPage = () => {
           </div>
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <img className="card-img-top img-fluid" src={image2} alt="" height={160} />
               <div className="card-body">
                 <h5 className="card-title text-center">Cryptocurrency</h5>
               </div>
@@ -31,7 +36,7 @@ const AboutPage = () => {
           </div>
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/1927259/pexels-photo-1927259.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <img className="card-img-top img-fluid" src={image3} alt="" height={160} />
               <div className="card-body">
                 <h5 className="card-title text-center">Exchanges</h5>
               </div>
@@ -39,7 +44,7 @@ const AboutPage = () => {
           </div>
           <div className="col-md-3 col-sm-6 mb-3 px-3">
             <div className="card h-100">
-              <img className="card-img-top img-fluid" src="https://images.pexels.com/photos/356056/pexels-photo-356056.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" height={160} />
+              <img className="card-img-top img-fluid" src={image4} alt="" height={160} />
               <div className="card-body">
                 <h5 className="card-title text-center">Websites</h5>
               </div>

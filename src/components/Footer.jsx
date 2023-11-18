@@ -9,9 +9,6 @@ const Footer = () => {
             <p className="mb-3 mb-md-0">Made with ❤️ by {" "}
             <a  href="https://BILLBOARDS.ETH.LIMO" className="text-decoration-underline text-dark fs-5" target="_blank" rel="noreferrer">MIGS</a>
             </p>
-            <a className="text-dark fs-4" href="https://github.com/" target="_blank" rel="noreferrer">
-              <i className="fa fa-github"></i>
-            </a>
           </div>
         </div>
       </footer>

@@ -1,11 +1,13 @@
 const express = require('express');
 const axios = require('axios');
 const path = require('path');
+const cors = require('cors'); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(cors()); // Enable CORS
 
 // Serve static files from the build folder
 app.use(express.static(path.join(__dirname, 'build')));

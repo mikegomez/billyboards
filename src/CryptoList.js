@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 
+
 const CryptoList = () => {
   const [cryptoData, setCryptoData] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -1,6 +1,6 @@
-# E-Commerce Website
+# A Web3 Advertisting Website
 
-A Ecommerce Website made with React.js Framework.
+A Web3 advertising website that allows for people to advertise their NFTs, website, crypto exchanges, or any other web3 item that they would like to spotlight. We're looking to be at the ground floor of this new revolution and we want to be the landing place for people who want to sell and buy or find anything web3.
 
 ## Features
 

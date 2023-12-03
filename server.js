@@ -4,10 +4,34 @@ const path = require('path');
 const cors = require('cors'); 
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
+
+app.use(cors()); // Enable CORS
 
 app.use(express.json());
-app.use(cors()); // Enable CORS
+
+// Define the CORS options
+// const corsOptions = {
+//   origin: 'https://billboards.eth.limo', // Replace with your actual production domain
+//   methods: 'GET',
+//   optionsSuccessStatus: 204,
+// };
+
+// app.use(cors(corsOptions));
+
+// Serve static files from the build folder
+// app.use(express.static(path.join(__dirname, 'build')));
+
+// // API endpoint to fetch cryptocurrency data
+// app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
+//   try {
+//     const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+//       headers: {
+//          'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+//        // 'X-CMC_PRO_API_KEY': process.env.REACT_APP_API_KEY,
+//       },
+//     });
+
 
 // Serve static files from the build folder
 app.use(express.static(path.join(__dirname, 'build')));
@@ -15,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // API endpoint to fetch cryptocurrency data
 app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
   try {
-    const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10', {
+    const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
       headers: {
         'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
       },

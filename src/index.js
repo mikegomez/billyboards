@@ -8,7 +8,7 @@ import store from './redux/store';
 import CryptoList from './CryptoList';
 
 //removed login and register from import
-import { Home, Product, Products, AboutPage, ContactPage, Cart, Checkout, PageNotFound } from "./pages"
+import { Home, Product, Products, AboutPage, ContactPage, Cart, Checkout, PageNotFound, Buy } from "./pages"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +22,7 @@ root.render(
         <Route path="/contact" element={<ContactPage />} />
        <Route path="/cart" element={<Cart />} />
         {/* <Route path="/login" element={<Login />} /> */}
-        {/* <Route path="/register" element={<Register />} /> */}
+        <Route path="/buy" element={<Buy />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/crypto" element={<CryptoList />} /> {/* Add this line for CryptoList */}
         <Route path="*" element={<PageNotFound />} />

@@ -1,12 +1,12 @@
 // CryptoList.js
 import React, { useEffect, useState } from 'react';
-import getCryptoData from './getCryptoData'; // Adjust the import path
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
+import getCryptoData from '../getCryptoData'; // Adjust the import path
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 
 
-const CryptoList = () => {
+const Buy = () => {
   const [cryptoData, setCryptoData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -124,4 +124,4 @@ const CryptoList = () => {
   );
 }
 
-export default CryptoList;
+export default Buy;

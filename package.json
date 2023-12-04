@@ -57,5 +57,7 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
-  }
+  },
+  "Access-Control-Allow-Origin": "https://billboards.eth.limo/"
+
 }

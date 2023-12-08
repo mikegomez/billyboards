@@ -30,7 +30,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run start-react\"",
+    "start": "npm run start-react",
     "start-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -57,7 +57,5 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
-  },
-  "Access-Control-Allow-Origin": "https://billboards.eth.limo/"
-
+  }
 }

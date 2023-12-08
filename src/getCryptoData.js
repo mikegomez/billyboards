@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const getCryptoData = async () => {
   try {
-    const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+    const response = await axios.get('http://localhost:8080/api/cryptocurrency/listings/latest', {
       headers: {
         'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
       },

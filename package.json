@@ -12,6 +12,7 @@
     "cors": "^2.8.5",
     "crypto-browserify": "^3.12.0",
     "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "font-awesome": "^4.7.0",
     "mailgen": "^2.0.28",
     "nodemailer": "^2.7.2",

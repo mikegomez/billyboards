@@ -24,7 +24,7 @@ const Navbar = () => {
                             <NavLink className="nav-link" to="/contact">Contact</NavLink>
                         </li> 
                         <li className="nav-item">
-                            <NavLink className="nav-link" to="/crypto">Buy</NavLink>
+                            <NavLink className="nav-link" to="/crypto">Advertise</NavLink>
                         </li>
                         {/* <li className="nav-item">
                             <NavLink className="nav-link" to="/buy">Buy 2</NavLink>

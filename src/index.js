@@ -22,7 +22,7 @@ root.render(
         <Route path="/contact" element={<ContactPage />} />
        <Route path="/cart" element={<Cart />} />
         {/* <Route path="/login" element={<Login />} /> */}
-        <Route path="/buy" element={<Buy />} />
+        {/* <Route path="/buy" element={<Buy />} /> */}
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/crypto" element={<CryptoList />} /> {/* Add this line for CryptoList */}
         <Route path="*" element={<PageNotFound />} />

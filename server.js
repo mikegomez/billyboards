@@ -52,7 +52,7 @@ app.use(cors(corsOptions));
 // API endpoint to fetch cryptocurrency data
 app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
     try {
-        const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', {
+        const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=20', {
             headers: {
                 'x-cmc_pro_api_key': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
             },

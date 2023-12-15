@@ -26,9 +26,9 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/crypto">Buy</NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <NavLink className="nav-link" to="/buy">Buy 2</NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
 

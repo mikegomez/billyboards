@@ -1,13 +1,14 @@
 // getCryptoData.js
 import axios from 'axios';
 //require('dotenv').config();
+const apiKey = require('./apiKeys');
 
 
 const getCryptoData = async () => {
   try {
     const response = await axios.get('https://backend-billyboards.onrender.com/api/cryptocurrency/listings/latest?limit=20', {
       headers: {
-        'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+        'X-CMC_PRO_API_KEY': apiKey,
       },
     });
     console.log(response.data);

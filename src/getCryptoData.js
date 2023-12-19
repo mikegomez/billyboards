@@ -1,7 +1,7 @@
 // getCryptoData.js
 import axios from 'axios';
 //require('dotenv').config();
-const apiKey = require('./apiKeys');
+import apiKey from './apiKeys';
 
 
 const getCryptoData = async () => {

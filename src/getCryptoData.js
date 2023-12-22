@@ -1,14 +1,15 @@
 // getCryptoData.js
 import axios from 'axios';
 //require('dotenv').config();
-import apiKey from './apiKeys';
+//import apiKey from './apiKeys';
 
 
 const getCryptoData = async () => {
   try {
-    const response = await axios.get('https://backend-billyboards.onrender.com/api/cryptocurrency/listings/latest?limit=20', {
+    const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=25', {
+  //  https://backend-billyboards.onrender.com/api/cryptocurrency/listings/latest?limit=20', {
       headers: {
-        'X-CMC_PRO_API_KEY': apiKey,
+        'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
       },
     });
     console.log(response.data);

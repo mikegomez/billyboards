@@ -91,7 +91,7 @@ const cardDescriptions = [
   {
     id: 9,
     title: "Invest on Digital Art Infomercial",
-    description: "Learn how to make easy money on digital art! Dear crypto natives,want to level up your finance game? Learn how to use digital marketplaces to buy provably authentic NFTs, build a collection, and make trades $$$$$$",
+    description: "Learn how to make easy money on digital art! Dear crypto natives,want to level up your finance game?",
     price: " ETH",
     url: "https://opensea.io/assets/ethereum/0xfbeef911dc5821886e1dda71586d90ed28174b7d/126980",
     category: "NFTs",
@@ -368,7 +368,7 @@ const Products = () => {
                   </Link>
                   <div className="card-body">
                   <h5 className="card-title">{cardDescription ? cardDescription.title : 'Title'}</h5>
-                    <p className="card-text">{cardDescription ? cardDescription.description : 'Description'}</p>
+                    <p className="card-text" style={{ height: "80px", overflow: "hidden", textOverflow: "ellipsis" }}>{cardDescription ? cardDescription.description : 'Description'}</p>
                   </div>
                   <ul className="list-group list-group-flush">
                     <li className="list-group-item lead">

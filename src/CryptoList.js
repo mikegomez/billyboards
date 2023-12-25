@@ -34,7 +34,7 @@ const CryptoList = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>Loading...Please wait 15 seconds my friend</p>;
   }
 
   if (error) {
@@ -101,7 +101,7 @@ const CryptoList = () => {
             </div>
         </div>
       )}
-      <div className='py-4'>
+      {/* <div className='py-4'>
       <ul>
         {cryptoData.map((crypto) => (
           <li key={crypto.id}>
@@ -117,7 +117,7 @@ const CryptoList = () => {
         ))}
       </ul>
       <br />
-    </div>
+    </div> */}
     </div>
     <Footer />
     </div>

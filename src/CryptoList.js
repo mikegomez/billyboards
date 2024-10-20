@@ -34,7 +34,7 @@ const CryptoList = () => {
   }, []);
 
   if (loading) {
-    return <p>Loading...Please wait 15 seconds my friend</p>;
+    return <p>Loading...Please wait up to 60 seconds my friend</p>;
   }
 
   if (error) {

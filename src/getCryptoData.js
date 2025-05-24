@@ -4,9 +4,26 @@ import axios from 'axios';
 //import apiKey from './apiKeys';
 
 
+// const getCryptoData = async () => {
+//   try {
+//     const response = await axios.get('https://backend-billyboards.onrender.com/api/cryptocurrency/listings/latest', {
+//       headers: {
+//         'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+//       },
+//     });
+//     console.log(response.data);
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error fetching cryptocurrency data:', error);
+//     throw error;
+//   }
+// };
+
+
+    
 const getCryptoData = async () => {
   try {
-    const response = await axios.get('https://backend-billyboards.onrender.com/api/cryptocurrency/listings/latest', {
+    const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10', {
       headers: {
         'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
       },
@@ -19,11 +36,10 @@ const getCryptoData = async () => {
   }
 };
 
-//     const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10', {
-//       headers: {
-//         'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
-//       },
-//     });
+    // const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10', {
+    //   headers: {
+    //     'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+    //   },
 
 //     // Log the data to the console for debugging purposes
 //     console.log(response.data);

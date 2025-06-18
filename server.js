@@ -17,15 +17,28 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Enable CORS with specific origin
+// const corsOptions = {
+//     origin: 'https://billboards.eth.limo',
+//     methods: 'GET',
+//     optionsSuccessStatus: 204,
+// };
 const corsOptions = {
-    origin: 'https://billboards.eth.limo',
-    methods: 'GET',
-    optionsSuccessStatus: 204,
+    origin: [
+        'https://billboard.eth.limo',
+        'https://billboards.eth.limo', 
+        'http://localhost:3000', // for local development
+        'http://localhost:3001'  // alternative local port
+    ],
+   methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+    optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
 
-
+// Also add this before your API routes to handle preflight requests:
+app.options('*', cors(corsOptions));
 
 
 // API endpoint to fetch cryptocurrency data

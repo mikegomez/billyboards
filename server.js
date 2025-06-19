@@ -24,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'build')));
 // };
 const corsOptions = {
     origin: [
-        'https://billboard.eth.limo',
         'https://billboards.eth.limo', 
         'http://localhost:3000', // for local development
         'http://localhost:3001'  // alternative local port
@@ -44,11 +43,18 @@ app.options('*', cors(corsOptions));
 // API endpoint to fetch cryptocurrency data
 app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
     try {
-        const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=20', {
-            headers: {
-                'x-cmc_pro_api_key': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
-            },
-        });
+        const limit = req.query.limit || 10;
+    const response = await axios.get(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=${limit}`, {
+      headers: {
+        'x-cmc_pro_api_key': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+         'Accept': 'application/json'
+      }
+    });
+        // const response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10', {
+        //     headers: {
+        //         'x-cmc_pro_api_key': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+        //     },
+        // });
 
         return res.json(response.data);
     } catch (error) {

@@ -6,12 +6,12 @@ import axios from 'axios';
 
 const getCryptoData = async () => {
   try {
-    const response = await axios.get('https://backend-billyboards.onrender.com/api/cryptocurrency/listings/latest', {
-     //const response = await axios.get('https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10', {  
-    headers: {
-        'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
-      },
-    });
+   // const response = await axios.get('https://billyboards.vercel.app/api/cryptocurrency/listings/latest?limit=20');
+    const response = await axios.get('https://billyboards.onrender.com/api/cryptocurrency/listings/latest?limit=10');
+    // headers: {
+    //     'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+    //   },
+    // });
     console.log(response.data);
     return response.data;
   } catch (error) {

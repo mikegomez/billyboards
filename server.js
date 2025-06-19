@@ -46,7 +46,7 @@ app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
         const limit = req.query.limit || 10;
     const response = await axios.get(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=${limit}`, {
       headers: {
-        'x-cmc_pro_api_key': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
+        'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
          'Accept': 'application/json'
       }
     });

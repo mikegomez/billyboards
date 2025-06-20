@@ -6,8 +6,8 @@ import axios from 'axios';
 
 const getCryptoData = async () => {
   try {
-   // const response = await axios.get('https://billyboards.vercel.app/api/cryptocurrency/listings/latest?limit=20');
-    const response = await axios.get('https://billyboards.onrender.com/api/cryptocurrency/listings/latest?limit=10');
+   //const response = await axios.get('https://billyboards.vercel.app/api/cryptocurrency/listings/latest?limit=20');
+    const response = await axios.get('/api/cryptocurrency/listings/latest?limit=10');
     // headers: {
     //     'X-CMC_PRO_API_KEY': 'e0fd5e52-7a1f-4efa-82d1-13bd719dccba',
     //   },

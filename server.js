@@ -3,9 +3,6 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const cors = require('cors');
-
-
-
 const app = express();
 const PORT = process.env.PORT || 8080;
 
@@ -14,7 +11,7 @@ app.use(express.json());
 
 
 // Serve static files from the build folder
-app.use(express.static(path.join(__dirname, 'build')));
+//app.use(express.static(path.join(__dirname, 'build')));
 
 // Enable CORS with specific origin
 // const corsOptions = {
@@ -26,10 +23,11 @@ const corsOptions = {
     origin: [
         'https://billboards.eth.limo', 
         'http://localhost:3000', // for local development
-        'http://localhost:3001'  // alternative local port
+        'http://localhost:3001',  // alternative local port
+        'http://localhost:8080'  // Add your server port too
     ],
-   methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     credentials: true,
     optionsSuccessStatus: 200
 };
@@ -42,6 +40,8 @@ app.options('*', cors(corsOptions));
 
 // API endpoint to fetch cryptocurrency data
 app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
+      console.log('API endpoint hit:', req.url);
+    console.log('Query params:', req.query);
     try {
         const limit = req.query.limit || 10;
     const response = await axios.get(`https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=${limit}`, {
@@ -63,6 +63,9 @@ app.get('/api/cryptocurrency/listings/latest', async (req, res) => {
     }
 });
 
+// Serve static files from the build folder (AFTER API routes)
+app.use(express.static(path.join(__dirname, 'build')));
+
 // Catch-all route to serve the React app
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
@@ -70,4 +73,5 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+     console.log('CORS enabled for:', corsOptions.origin);
 });

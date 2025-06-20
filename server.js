@@ -23,6 +23,8 @@ const corsOptions = {
     origin: [
         'https://billboards.eth.limo', 
         'https://billyboards.onrender.com', // Add your Render URL
+        /\.ipfs\./, // Allow any IPFS gateway
+        /\.eth\.limo$/, // Allow ENS domains
         'http://localhost:3000', // for local development
         'http://localhost:3001',  // alternative local port
         'http://localhost:8080'  // Add your server port too
